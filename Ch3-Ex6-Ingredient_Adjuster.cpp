@@ -1,20 +1,39 @@
-// Ch3-Ex6-Ingredient_Adjuster.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/* File Name: Ch3-Ex6-Ingredient_Adjuster.cpp
+Programmer : Sean G
+Requirements :
+
+A cookie recipe calls for the following ingredients:
+
+· 1.5 cups of sugar
+
+· 1 cup of butter
+
+. 2.75 cups of flour
+
+The recipe produces 48 cookies with this amount of the ingredients. Write a program that asks the
+user how many cookies he or she wants to make, then displays the number of cups of each
+ingredient needed for the specified number of cookies.
+*/
 
 #include <iostream>
+using namespace std;
+double sugar, butter, flour, desired_cookies;
+
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    double sugar = 1.5;
+    double butter = 1;
+    double flour = 2.75;
+	double cookies = 48;
+
+	cout << "How many cookies do you want to make? ";
+	cin >> desired_cookies;
+
+	cout << "To make " << desired_cookies << " cookies, you will need: " << endl;
+	cout << (sugar * desired_cookies) / cookies << " cups of sugar" << endl;
+	cout << (butter * desired_cookies) / cookies << " cups of butter" << endl;
+	cout << (flour * desired_cookies) / cookies << " cups of flour" << endl;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
